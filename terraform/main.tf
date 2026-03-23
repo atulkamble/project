@@ -44,7 +44,7 @@ resource "aws_security_group" "mySG" {
 }
 resource "aws_instance" "ec2" {
   ami                    = "ami-02dfbd4ff395f2a1b" # Amazon Linux 2 AMI
-  instance_type          = "t3.medium"
+  instance_type          = "t3.large"
   vpc_security_group_ids = [aws_security_group.mySG.id]
   count                  = "1"
 
